@@ -1,4 +1,4 @@
-package tn.teams.fromzero.validation;
+package tn.teams.fromzero.validations;
 
 import tn.teams.fromzero.exceptions.ObjectValidationException;
 

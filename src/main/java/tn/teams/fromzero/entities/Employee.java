@@ -1,4 +1,4 @@
-package tn.teams.fromzero.entity;
+package tn.teams.fromzero.entities;
 import lombok.*;
 
 import javax.persistence.*;
