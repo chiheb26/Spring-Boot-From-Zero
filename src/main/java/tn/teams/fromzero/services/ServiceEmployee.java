@@ -10,5 +10,5 @@ public interface ServiceEmployee {
     void delete(Long id);
     EmployeeDTO findById(Long id);
     List<EmployeeDTO> findAllEmployees();
-    Integer findAllEmployeesByAge(Integer age);
+    Integer countEmployeesByAge(Integer age);
 }

@@ -1,6 +1,7 @@
 package tn.teams.fromzero.dto;
 
 import lombok.*;
+import tn.teams.fromzero.entities.Employee;
 
 import javax.validation.constraints.*;
 
@@ -23,6 +24,23 @@ public class EmployeeDTO {
     @Max(value = 62,message = "l'age doit etre inf a 62 ans")
     private Integer age ;
 
-    @Email(message = "l'émail doit etre dans la format adéquate")
+    @Email(message = "l'email doit etre dans la format adéquate")
     private String email ;
+
+    public static EmployeeDTO fromEntity(Employee employee){
+        return EmployeeDTO.builder()
+                .id(employee.getId())
+                .age(employee.getAge())
+                .email(employee.getEmail())
+                .fullName(employee.getFullName())
+                .build();
+    }
+    public static Employee toEntity(EmployeeDTO dto){
+        return Employee.builder()
+                .id(dto.getId())
+                .age(dto.getAge())
+                .email(dto.getEmail())
+                .fullName(dto.getFullName())
+                .build();
+    }
 }
